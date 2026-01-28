@@ -1,5 +1,7 @@
 # Welcome to your Lovable project
 
+Note: This repository now has a `dev` branch with a sample change (created by clashwithabin).
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
