@@ -18,14 +18,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+977 1-XXXXXXX",
-    href: "tel:+9771XXXXXXX",
+    value: "+977 980-1696703",
+    href: "tel:+9779801696703",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "Kathmandu, Nepal",
-    href: "#",
+    value: "Kalimati, Kathmandu, Nepal",
+    href: "https://maps.google.com/?q=Kalimati%2C+Kathmandu%2C+Nepal",
   },
 ];
 
@@ -206,15 +206,18 @@ export function Contact() {
                 Follow Us
               </h4>
               <div className="flex gap-4">
-                {["Facebook", "LinkedIn", "Twitter"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium"
-                  >
-                    {social}
-                  </a>
-                ))}
+                <a href="https://www.facebook.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">Facebook</a>
+                <a href="https://www.instagram.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">Instagram</a>
+                <a href="https://x.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">X</a>
+                <a href="https://www.linkedin.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">LinkedIn</a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
               </div>
             </div>
           </motion.div>

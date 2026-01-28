@@ -82,7 +82,7 @@ export function Hero() {
               onClick={() => scrollToSection("#about")}
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6"
+                className="border-primary-foreground/30 bg-transparent text-white hover:bg-white/10 text-lg px-8 py-6"
             >
               Learn More
             </Button>
@@ -94,7 +94,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2"
         >
           <motion.button
             onClick={() => scrollToSection("#about")}
@@ -102,8 +102,8 @@ export function Hero() {
             transition={{ repeat: Infinity, duration: 2 }}
             className="flex flex-col items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"
           >
-            <span className="text-sm">Scroll to explore</span>
             <ChevronDown className="h-6 w-6" />
+            <span className="text-sm">Scroll to explore</span>
           </motion.button>
         </motion.div>
       </div>

@@ -69,40 +69,48 @@ export function Team() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full border-border/50 hover:shadow-lg transition-all duration-300 group overflow-hidden">
-                <CardContent className="p-6 text-center">
-                  {/* Avatar */}
-                  <div className="relative mb-6">
-                    <Avatar className="w-28 h-28 mx-auto ring-4 ring-primary/10 group-hover:ring-primary/20 transition-all duration-300">
-                      <AvatarImage src={member.image} alt={member.name} />
-                      <AvatarFallback className="bg-gradient-to-br from-primary to-primary/70 text-primary-foreground text-2xl font-display">
-                        {member.initials}
-                      </AvatarFallback>
-                    </Avatar>
-                  </div>
-
-                  {/* Info */}
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-accent font-medium text-sm mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {member.bio}
-                  </p>
-
-                  {/* Social Links */}
-                  <div className="flex justify-center gap-3">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-9 h-9 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </a>
-                    <a
+  const teamMembers = [
+    {
+      name: "Shiva Baniya",
+      role: "Leadership",
+      image: "",
+      initials: "SB",
+      linkedin: "",
+      bio: "",
+    },
+    {
+      name: "Kalpana Maharjan",
+      role: "Leadership",
+      image: "",
+      initials: "KM",
+      linkedin: "",
+      bio: "",
+    },
+    {
+      name: "Kristy Baniya",
+      role: "Leadership",
+      image: "",
+      initials: "KB",
+      linkedin: "",
+      bio: "",
+    },
+    {
+      name: "Abin Maharjan",
+      role: "Leadership",
+      image: "",
+      initials: "AM",
+      linkedin: "",
+      bio: "",
+    },
+    {
+      name: "Prijal Bista",
+      role: "Leadership",
+      image: "",
+      initials: "PB",
+      linkedin: "",
+      bio: "",
+    },
+  ];
                       href={`mailto:${member.name.toLowerCase().replace(" ", ".")}@mediaedge.com`}
                       className="w-9 h-9 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
