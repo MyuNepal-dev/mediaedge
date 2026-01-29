@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Kalimati, Kathmandu, Nepal",
+    value: "Dallu, Kathmandu, Nepal",
     href: "https://www.google.com/maps/place/Ram+Janaki+Complex+BM/@27.7040529,85.2989136,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb190ee26e9ffb:0xa37df22d495c97aa!8m2!3d27.7040482!4d85.3014885!16s%2Fg%2F11llyd1h7t?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];

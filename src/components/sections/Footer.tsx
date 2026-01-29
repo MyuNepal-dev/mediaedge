@@ -4,14 +4,12 @@ import { Facebook, Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react";
 const footerLinks = {
   company: [
     { label: "About", href: "#about" },
+    { label: "Portfolio", href: "#portfolio" },
     { label: "Services", href: "#services" },
-    { label: "Team", href: "#team" },
+    { label: "Mission", href: "#mission" },
     { label: "Contact", href: "#contact" },
   ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-  ],
+  legal: [],
   social: [
     { icon: Facebook, href: "https://www.facebook.com/myunepal", label: "Facebook" },
     { icon: Instagram, href: "https://www.instagram.com/myunepal", label: "Instagram" },
@@ -54,7 +52,7 @@ export function Footer() {
               </div>
               <div className="mt-4 text-background/70">
                 <div>Phone: +977 980-1696703</div>
-                <div>Address: Ram Janaki Complex, Bhaktapur</div>
+                <div>Address: Dallu, Kathmandu</div>
               </div>
           </div>
 
@@ -77,32 +75,34 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Newsletter placeholder (non-functional) */}
           <div>
-            <h4 className="font-display font-semibold text-background mb-4">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            {/* Newsletter placeholder */}
-            <div className="mt-8">
+            <div className="mt-2">
               <h4 className="font-display font-semibold text-background mb-2">
                 Stay Updated
               </h4>
-              <p className="text-background/70 text-sm">
+              <p className="text-background/70 text-sm pb-3">
                 Contact us to stay informed about our latest news and offerings.
               </p>
+
+              <form onSubmit={(e) => e.preventDefault()} className="mt-3 flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  aria-label="Email address"
+                  disabled
+                  className="flex-1 h-10 px-3 rounded-md bg-background/5 text-background/90 placeholder:text-background/60"
+                />
+                <button
+                  type="submit"
+                  disabled
+                  className="h-10 px-4 rounded-md bg-accent text-accent-foreground"
+                >
+                  Subscribe
+                </button>
+              </form>
+
+              
             </div>
           </div>
         </div>
