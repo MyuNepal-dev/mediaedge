@@ -9,7 +9,6 @@ const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#mission", label: "Mission" },
   { href: "#team", label: "Team" },
-  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -56,7 +55,7 @@ export function Navigation() {
             className="flex items-center gap-2"
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">M</span>
+              <img src="/logo.png" alt="Media Edge" className="w-10 h-10 object-contain" />
             </div>
             <span className={`font-display font-semibold text-xl transition-colors ${
               isScrolled ? "text-foreground" : "text-primary-foreground"

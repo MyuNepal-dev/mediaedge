@@ -13,10 +13,10 @@ const footerLinks = {
     { label: "Terms of Service", href: "/terms" },
   ],
   social: [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/myunepal", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/myunepal", label: "Instagram" },
+    { icon: Twitter, href: "https://x.com/myunepal", label: "X" },
+    { icon: Linkedin, href: "https://www.linkedin.com/myunepal", label: "LinkedIn" },
   ],
 };
 
@@ -40,32 +40,23 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">M</span>
+              <div className="flex items-center gap-4 mb-4">
+                <img src="/logo.png" alt="Media Edge" className="w-10 h-10 object-contain" />
+                <img src="/myunepal-logo.png" alt="MyuNepal" className="w-24 h-auto object-contain" />
+                <span className="font-display font-semibold text-xl text-background">Media Edge</span>
               </div>
-              <span className="font-display font-semibold text-xl text-background">
-                Media Edge
-              </span>
-            </div>
-            <p className="text-background/70 mb-6 max-w-md">
-              Driving business growth through strategic media & digital solutions. 
-              Building the future of commerce in Nepal.
-            </p>
-            <div className="flex gap-4">
-              {footerLinks.social.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
+              <p className="text-background/70 mb-6 max-w-md">Driving business growth through strategic media & digital solutions. Building the future of commerce in Nepal.</p>
+              <div className="flex gap-4">
+                {footerLinks.social.map((social) => (
+                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors" aria-label={social.label}>
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+              <div className="mt-4 text-background/70">
+                <div>Phone: +977 980-1696703</div>
+                <div>Address: Kalimati, Kathmandu, Nepal</div>
+              </div>
           </div>
 
           {/* Quick Links */}
