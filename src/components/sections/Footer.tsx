@@ -41,8 +41,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
               <div className="flex items-center gap-4 mb-4">
-                <img src="/logo.png" alt="Media Edge" className="w-10 h-10 object-contain" />
-                <img src="/myunepal-logo.png" alt="MyuNepal" className="w-24 h-auto object-contain" />
+                <img src="/favicon.ico" alt="Media Edge" className="w-8 h-8 object-contain" />
                 <span className="font-display font-semibold text-xl text-background">Media Edge</span>
               </div>
               <p className="text-background/70 mb-6 max-w-md">Driving business growth through strategic media & digital solutions. Building the future of commerce in Nepal.</p>
@@ -55,7 +54,7 @@ export function Footer() {
               </div>
               <div className="mt-4 text-background/70">
                 <div>Phone: +977 980-1696703</div>
-                <div>Address: Kalimati, Kathmandu, Nepal</div>
+                <div>Address: Ram Janaki Complex, Bhaktapur</div>
               </div>
           </div>
 

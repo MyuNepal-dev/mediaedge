@@ -13,32 +13,32 @@ const services = [
   {
     icon: Megaphone,
     title: "Brand Strategy & Media Planning",
-    description: "Comprehensive brand development and strategic media planning to amplify your market presence.",
+    description: "We craft distinctive brand identities and data-backed media strategies that cut through the noise, ensuring your message reaches the right audience at the right time.",
   },
   {
     icon: TrendingUp,
     title: "Digital Marketing & Growth",
-    description: "Data-driven digital marketing strategies that accelerate customer acquisition and business growth.",
+    description: "Our data-driven campaigns are engineered to accelerate customer acquisition, boost engagement, and deliver sustainable ROI across all digital channels.",
   },
   {
     icon: Handshake,
     title: "Strategic Partnerships",
-    description: "Building meaningful partnerships that create synergies and unlock new market opportunities.",
+    description: "We identify and cultivate high-value partnerships that create synergy, unlock new revenue streams, and expand market influence for your business.",
   },
   {
     icon: Laptop,
     title: "Product & Platform Support",
-    description: "End-to-end support for digital product development and platform management.",
+    description: "From initial build to ongoing optimization, we provide end-to-end support for digital products and platforms, ensuring performance, usability, and scalability.",
   },
   {
     icon: BarChart3,
     title: "Business Analytics",
-    description: "Actionable insights through advanced analytics to inform strategic decision-making.",
+    description: "Turn data into decisions. We deliver actionable insights and intuitive dashboards that provide clarity, track performance, and guide strategic planning.",
   },
   {
     icon: Globe,
     title: "Market Expansion",
-    description: "Strategic guidance for entering new markets and scaling operations effectively.",
+    description: "We develop and execute tailored entry and scaling strategies, helping you navigate new markets with confidence and precision.",
   },
 ];
 

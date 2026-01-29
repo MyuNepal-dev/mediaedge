@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@mediaedge.com.np",
-    href: "mailto:info@mediaedge.com.np",
+    value: "info@myunepal.com",
+    href: "mailto:info@myunepal.com",
   },
   {
     icon: Phone,
@@ -25,7 +25,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Address",
     value: "Kalimati, Kathmandu, Nepal",
-    href: "https://maps.google.com/?q=Kalimati%2C+Kathmandu%2C+Nepal",
+    href: "https://www.google.com/maps/place/Ram+Janaki+Complex+BM/@27.7040529,85.2989136,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb190ee26e9ffb:0xa37df22d495c97aa!8m2!3d27.7040482!4d85.3014885!16s%2Fg%2F11llyd1h7t?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -49,9 +49,24 @@ export function Contact() {
       title: "Message sent!",
       description: "Thank you for reaching out. We'll get back to you soon.",
     });
+    // Open user's email client with prefilled message to info@myunepal.com
+    const subject = `Contact from ${formData.name || "Website"}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+    const mailto = `mailto:info@myunepal.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
 
+    // Reset form and stop spinner before opening mail client
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
+
+    // Open mailto in new window/tab (will open email client)
+    try {
+      window.location.href = mailto;
+    } catch (err) {
+      // fallback to open
+      window.open(mailto, "_blank");
+    }
   };
 
   const handleChange = (
@@ -202,22 +217,26 @@ export function Contact() {
 
             {/* Social Links */}
             <div className="mt-10">
-              <h4 className="font-semibold text-foreground mb-4">
-                Follow Us
-              </h4>
-              <div className="flex gap-4">
-                <a href="https://www.facebook.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">Facebook</a>
-                <a href="https://www.instagram.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">Instagram</a>
-                <a href="https://x.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">X</a>
-                <a href="https://www.linkedin.com/myunepal" target="_blank" rel="noreferrer" className="px-4 py-2 bg-muted rounded-lg text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-medium">LinkedIn</a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
+              <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
+              <div className="flex gap-3">
+                {[
+                  { icon: Facebook, href: "https://www.facebook.com/myunepal", label: "Facebook" },
+                  { icon: Instagram, href: "https://www.instagram.com/myunepal", label: "Instagram" },
+                  { icon: Twitter, href: "https://x.com/myunepal", label: "Twitter" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/myunepal", label: "LinkedIn" },
+                ].map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <social.icon className="h-5 w-5" />
+                    <span className="sr-only">{social.label}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </motion.div>

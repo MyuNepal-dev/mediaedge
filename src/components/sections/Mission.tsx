@@ -9,7 +9,7 @@ const missionPoints = [
 ];
 
 const visionPoints = [
-  "Become the leading digital business ecosystem in South Asia",
+  "Become the leading digital business ecosystem",
   "Pioneer innovation in B2B commerce and media solutions",
   "Build a network of thriving, interconnected businesses",
   "Set new standards for corporate excellence",

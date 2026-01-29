@@ -5,42 +5,50 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const teamMembers = [
   {
-    name: "John Smith",
-    role: "Chief Executive Officer",
+    name: "Shiva Baniya",
+    role: "Leadership",
     image: "",
-    initials: "JS",
-    linkedin: "https://linkedin.com",
-    bio: "Visionary leader with 15+ years of experience in digital transformation.",
+    initials: "SB",
+    linkedin: "",
+    bio: "",
   },
   {
-    name: "Sarah Johnson",
-    role: "Chief Operating Officer",
+    name: "Kalpana Maharjan",
+    role: "Leadership",
     image: "",
-    initials: "SJ",
-    linkedin: "https://linkedin.com",
-    bio: "Operations expert focused on scaling businesses sustainably.",
+    initials: "KM",
+    linkedin: "",
+    bio: "",
   },
   {
-    name: "Michael Chen",
-    role: "Chief Technology Officer",
+    name: "Kristy Baniya",
+    role: "Leadership",
     image: "",
-    initials: "MC",
-    linkedin: "https://linkedin.com",
-    bio: "Tech innovator with a passion for building scalable platforms.",
+    initials: "KB",
+    linkedin: "",
+    bio: "",
   },
   {
-    name: "Emily Davis",
-    role: "Head of Marketing",
+    name: "Abin Maharjan",
+    role: "Leadership",
     image: "",
-    initials: "ED",
-    linkedin: "https://linkedin.com",
-    bio: "Brand strategist driving growth through creative campaigns.",
+    initials: "AM",
+    linkedin: "",
+    bio: "",
+  },
+  {
+    name: "Prijal Bista",
+    role: "Leadership",
+    image: "",
+    initials: "PB",
+    linkedin: "",
+    bio: "",
   },
 ];
 
 export function Team() {
   return (
-    <section id="team" className="py-20 lg:py-32 bg-muted/30">
+    <section id="team" className="hidden py-20 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,48 +77,40 @@ export function Team() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-  const teamMembers = [
-    {
-      name: "Shiva Baniya",
-      role: "Leadership",
-      image: "",
-      initials: "SB",
-      linkedin: "",
-      bio: "",
-    },
-    {
-      name: "Kalpana Maharjan",
-      role: "Leadership",
-      image: "",
-      initials: "KM",
-      linkedin: "",
-      bio: "",
-    },
-    {
-      name: "Kristy Baniya",
-      role: "Leadership",
-      image: "",
-      initials: "KB",
-      linkedin: "",
-      bio: "",
-    },
-    {
-      name: "Abin Maharjan",
-      role: "Leadership",
-      image: "",
-      initials: "AM",
-      linkedin: "",
-      bio: "",
-    },
-    {
-      name: "Prijal Bista",
-      role: "Leadership",
-      image: "",
-      initials: "PB",
-      linkedin: "",
-      bio: "",
-    },
-  ];
+              <Card className="border-border/50 hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6 text-center">
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarFallback className="bg-primary text-primary-foreground text-lg font-semibold">
+                      {member.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  
+                  <h3 className="font-semibold text-lg text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {member.role}
+                  </p>
+                  
+                  {member.bio && (
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {member.bio}
+                    </p>
+                  )}
+
+                  <div className="flex justify-center gap-2">
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-9 h-9 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    )}
+                    <a
                       href={`mailto:${member.name.toLowerCase().replace(" ", ".")}@mediaedge.com`}
                       className="w-9 h-9 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                     >

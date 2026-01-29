@@ -39,8 +39,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6">
-              Welcome to Media Edge
+            <span className="inline-block px-4 py-2 text-accent rounded-full text-sm font-medium mb-6">
+              Building & Scaling Digital Platforms
             </span>
           </motion.div>
 
@@ -51,7 +51,7 @@ export function Hero() {
             className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight mb-6"
           >
             Driving Business Growth Through{" "}
-            <span className="text-accent">Strategic Media</span> & Digital Solutions
+            <span className="text-accent">Strategic Media</span>  & Scalable Digital Platforms
           </motion.h1>
 
           <motion.p
@@ -60,9 +60,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10"
           >
-            Media Edge Pvt. Ltd. is a forward-thinking company committed to empowering businesses 
-            with innovative digital platforms and strategic partnerships.
-          </motion.p>
+Media Edge Pvt. Ltd. builds, operates, and scales digital platforms that address real business challenges. Our flagship venture, MyuNepal, is a Nepal's Largest B2B wholesale marketplace designed to support business growth through technology, media, and strategy.          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -71,20 +69,15 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#portfolio")}
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-6"
             >
-              Contact Us
+              View Our Platforms
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button
-              onClick={() => scrollToSection("#about")}
-              size="lg"
-              variant="outline"
-                className="border-primary-foreground/30 bg-transparent text-white hover:bg-white/10 text-lg px-8 py-6"
-            >
-              Learn More
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-white hover:bg-white/10 text-lg px-8 py-6">
+              <a href="https://myunepal.com" target="_blank" rel="noopener noreferrer">Explore MyuNepal</a>
             </Button>
           </motion.div>
         </div>
@@ -94,7 +87,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2"
+          className="absolute i left-1/2 -translate-x-1/2"
         >
           <motion.button
             onClick={() => scrollToSection("#about")}
