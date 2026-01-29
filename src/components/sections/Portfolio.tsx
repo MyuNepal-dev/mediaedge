@@ -6,11 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 const portfolioItems = [
   {
     name: "MyuNepal",
-    tagline: "Nepal's Premier B2B Marketplace",
+    tagline: "Nepal's Largest B2B Marketplace",
     description:
-      "MyuNepal connects buyers and suppliers across Nepal, creating a thriving digital ecosystem for B2B commerce. Our platform empowers businesses to discover new opportunities, streamline procurement, and grow their networks.",
+      "MyuNepal is a digital B2B marketplace built to support wholesale and bulk trade in Nepal, connecting manufacturers, distributors, suppliers, and buyers on a single platform. It enables businesses to list wholesale products, reach bulk buyers, and discover verified suppliers across multiple categories.",
     link: "https://myunepal.com",
-    features: ["B2B Marketplace", "Verified Suppliers", "Secure Transactions"],
+    features: ["B2B Marketplace", "Verified Suppliers", "Wholesale", "Bulk Orders", "Connecting Buyers & Suppliers"],
     color: "from-primary to-primary/70",
   },
 ];
@@ -51,14 +51,7 @@ export function Portfolio() {
                   <div className="grid md:grid-cols-2">
                     {/* Logo/Visual Section */}
                     <div className={`bg-gradient-to-br ${item.color} p-8 md:p-12 flex items-center justify-center min-h-[250px]`}>
-                      <div className="text-center">
-                        <div className="text-5xl md:text-6xl font-display font-bold text-primary-foreground mb-3">
-                          Myu
-                        </div>
-                        <div className="text-primary-foreground/80 text-lg">
-                          Nepal
-                        </div>
-                      </div>
+                      <img src="/Myunepal_final_logo_verified.svg" alt="MyuNepal" className="w-40 md:w-56 h-auto" />
                     </div>
 
                     {/* Content Section */}

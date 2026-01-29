@@ -6,17 +6,20 @@ const coreValues = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We embrace cutting-edge technologies and creative solutions to stay ahead of the curve.",
+    description:
+      "We anticipate change and act on it. By proactively integrating cutting-edge technology and creative thinking, we design solutions that set the standard, ensuring our partners are always ahead.",
   },
   {
     icon: Shield,
     title: "Reliability",
-    description: "Our commitment to consistency and dependability builds lasting partnerships with our clients.",
+    description:
+      "Trust is our foundation. We build resilient systems and maintain unwavering consistency in our partnerships, delivering dependability that businesses can count on today and tomorrow.",
   },
   {
     icon: TrendingUp,
     title: "Growth",
-    description: "We focus on sustainable growth strategies that create long-term value for all stakeholders.",
+    description:
+      "We measure success by the sustainable value we create. Our strategies are designed to scale responsibly, driving long-term growth for our clients, partners, and the ecosystems we serve.",
   },
 ];
 
@@ -40,18 +43,26 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                Media Edge Pvt. Ltd. was founded with a vision to transform how businesses 
-                operate in the digital age. As a parent company, we nurture innovative ventures 
-                that address real market needs.
+                Media Edge Pvt. Ltd. was founded on a singular vision: to
+                redefine business in Nepal for the digital era. We operate as a
+                strategic incubator and operator, building and scaling ventures
+                that solve critical market needs.
               </p>
               <p>
-                Our flagship product, MyuNepal, represents our commitment to creating digital 
-                platforms that connect buyers and suppliers, fostering a thriving B2B ecosystem 
-                in Nepal.
+                Our journey is exemplified by our flagship platform, MyuNepal.
+                What began as a mission to digitally connect Nepal's businesses
+                became the country's largest B2B wholesale marketplace,
+                revolutionizing supplier discovery and bulk trade. The proven
+                methodologies, technical architecture, and growth frameworks
+                developed during MyuNepal's ascent now form the cornerstone of
+                our expertise.{" "}
               </p>
               <p>
-                We believe in the power of strategic partnerships and technology-driven solutions 
-                to create sustainable business growth for our clients and partners.
+                Today, Media Edge leverages this deep mastery in platform
+                growth, digital media, and robust system design to empower a
+                broader ecosystem. We are committed to fostering sustainable
+                growth for our clients and partners through technology-driven
+                solutions and strategic collaboration.{" "}
               </p>
             </div>
           </motion.div>
@@ -68,11 +79,13 @@ export function About() {
               {/* Abstract decorative elements */}
               <div className="absolute top-10 right-10 w-32 h-32 bg-accent/30 rounded-full blur-2xl" />
               <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary-foreground/10 rounded-full blur-2xl" />
-              
+
               <div className="text-center p-8 relative z-10">
-                <div className="text-7xl font-display font-bold text-primary-foreground mb-4">
-                  ME
-                </div>
+                <img
+                  src="/favicon.ico"
+                  alt="Media Edge"
+                  className="w-28 h-28 mx-auto mb-4 object-contain"
+                />
                 <div className="text-primary-foreground/80 text-xl">
                   Media Edge Pvt. Ltd.
                 </div>
@@ -115,9 +128,7 @@ export function About() {
                     <h4 className="font-display text-xl font-semibold text-foreground mb-3">
                       {value.title}
                     </h4>
-                    <p className="text-muted-foreground">
-                      {value.description}
-                    </p>
+                    <p className="text-muted-foreground">{value.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
